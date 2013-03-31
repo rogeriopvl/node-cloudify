@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+if (process.argv.length < 3){
+    showHelp();
+    process.exit(-1);
+}
+
+var cmd = process.argv[2];
+
+if (cmd === '--help' || cmd === '-h') {
+    showHelp();
+} else if (cmd === '--version' || cmd === '-v') {
+    showVersion();
+} else {
+    // read config file and start cloudify
+    var config = require('../lib/config.js'),
+        cloudify = require('../lib/cloudify.js')(config, cmd);
+    cloudify();
+}
+
+var showHelp = function() {
+    console.log('Usage: cloudify <file_path>');
+};
+
+var showVersion = function() {
+    console.log('Cloudify Version: ' + config.version);
+};

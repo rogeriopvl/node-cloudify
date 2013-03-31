@@ -1,0 +1,32 @@
+{
+    "name": "cloudify",
+    "description": "Share files from the command line using CloudPT",
+    "author": "Rogério Vicente <rogeriopvl@gmail.com>",
+    "keywords": ["cloudify", "cloud", "cloudpt", "cli"],
+    "maintainers":[
+        {"name": "Rogério Vicente", "web": "http://rogeriopvl.com"}
+    ],
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rogeriopvl/node-cloudify"
+    },
+    "dependencies": {
+        "nodecloudpt": ">= 0.5.3"
+    },
+    "engines": {
+        "node": ">=0.8.0"
+    },
+    "directories": {
+        "lib": "./lib"
+    },
+    "bin": {
+        "nodo": "./bin/cloudify"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://github.com/rogeriopvl/cloudify/LICENSE"
+        }
+    ]
+}
