@@ -12,10 +12,15 @@ if (cmd === '--help' || cmd === '-h') {
 } else if (cmd === '--version' || cmd === '-v') {
     //showVersion();
 } else {
-    // read config file and start cloudify
-    var config = require('../lib/config.js'),
-        cloudify = require('../lib/cloudify.js')(config, cmd);
-    cloudify();
+    var fs = require('fs');
+
+    if (fs.existsSync(cmd) && !fs.lstatSync(cmd).isDirectory()){
+        var config = require('../lib/config.js'),
+            cloudify = require('../lib/cloudify.js')(config, cmd);
+        cloudify();
+    } else {
+        console.log('File does not exists or is a directory');
+    }
 }
 
 function showHelp() {
