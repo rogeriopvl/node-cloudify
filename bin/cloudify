@@ -10,7 +10,7 @@ var cmd = process.argv[2];
 if (cmd === '--help' || cmd === '-h') {
     showHelp();
 } else if (cmd === '--version' || cmd === '-v') {
-    //showVersion();
+    showVersion();
 } else {
     var fs = require('fs');
 
@@ -28,5 +28,6 @@ function showHelp() {
 };
 
 function showVersion() {
-    console.log('Cloudify Version: ' + config.version);
+    var meta = require('../package.json');
+    console.log('cloudify version v' + meta.version);
 };
