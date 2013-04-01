@@ -12,7 +12,8 @@
         "url": "https://github.com/rogeriopvl/node-cloudify"
     },
     "dependencies": {
-        "nodecloudpt": ">= 0.5.3"
+        "nodecloudpt": ">= 0.5.3",
+        "oauth": ">= 0.9.10"
     },
     "engines": {
         "node": ">=0.8.0"
