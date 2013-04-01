@@ -10,7 +10,7 @@ var cmd = process.argv[2];
 if (cmd === '--help' || cmd === '-h') {
     showHelp();
 } else if (cmd === '--version' || cmd === '-v') {
-    showVersion();
+    //showVersion();
 } else {
     // read config file and start cloudify
     var config = require('../lib/config.js'),
@@ -18,10 +18,10 @@ if (cmd === '--help' || cmd === '-h') {
     cloudify();
 }
 
-var showHelp = function() {
+function showHelp() {
     console.log('Usage: cloudify <file_path>');
 };
 
-var showVersion = function() {
+function showVersion() {
     console.log('Cloudify Version: ' + config.version);
 };
