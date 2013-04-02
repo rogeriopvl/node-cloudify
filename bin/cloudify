@@ -15,9 +15,14 @@ if (cmd === '--help' || cmd === '-h') {
     var fs = require('fs');
 
     if (fs.existsSync(cmd) && !fs.lstatSync(cmd).isDirectory()){
-        var config = require('../lib/config.js'),
-            cloudify = require('../lib/cloudify.js')(config, cmd);
-        cloudify();
+        var config = require('../lib/config.js')();
+
+        if (!config.data.oauth.token) {
+            require('../lib/setup.js')();
+        } else {
+            var cloudify = require('../lib/cloudify.js')(config.data, cmd);
+            cloudify();
+        }
     } else {
         console.log('File does not exists or is a directory');
     }
