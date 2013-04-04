@@ -10,7 +10,9 @@ To install cloudify is as simple as:
 
     npm install -g cloudify
 
-After you will have to run cloudify one first time, and it will create the configuration file for you. Then edit the file `~/.cloudifyrc` and complete with OAuth stuff (access token).
+When you first run `cloudify`, the CloudPT OAuth setup will take place. Just follow the instructions to enable access to your account.
+
+After the setup your OAuth tokens will be stored in a file at `~/.cloudifyrc`.
 
 ## Usage
 
