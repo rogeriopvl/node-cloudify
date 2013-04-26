@@ -10,12 +10,16 @@ else {
 }
 
 function startup(args) {
-    if (args.length < 3){
+
+    // remove node and cloudify path
+    args = args.slice(2);
+
+    if (args.length !== 1){
         showHelp();
         process.exit(-1);
     }
 
-    var cmd = args[2];
+    var cmd = args.shift();
 
     if (cmd === '--help' || cmd === '-h') {
         showHelp();
