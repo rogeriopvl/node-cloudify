@@ -14,7 +14,7 @@ function startup(args) {
     // remove node and cloudify path
     args = args.slice(2);
 
-    if (args.length !== 1){
+    if (args.length < 1 || args.length > 2){
         showHelp();
         process.exit(-1);
     }
@@ -28,10 +28,20 @@ function startup(args) {
         showVersion();
     }
     else {
-        var fs = require('fs');
+        var fs = require('fs'),
+            options = { download: false };
+
+        if (cmd === '-d') {
+            if (args.length < 1) {
+                showHelp();
+                process.exit(-1);
+            }
+            options.download = true;
+            cmd = args.shift();
+        }
 
         if (fs.existsSync(cmd) && !fs.lstatSync(cmd).isDirectory()){
-            var cloudify = require('../lib/cloudify.js')(config.data, cmd);
+            var cloudify = require('../lib/cloudify.js')(config.data, cmd, options);
             cloudify();
         }
         else {
@@ -41,7 +51,10 @@ function startup(args) {
 }
 
 function showHelp() {
-    console.log('Usage: cloudify <file_to_share>');
+    console.log('Usage: cloudify [options] <file_to_share>');
+    console.log('');
+    console.log('Options:');
+    console.log('\t-d  (optional) get direct link to file, instead of preview link');
 };
 
 function showVersion() {
