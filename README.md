@@ -18,7 +18,10 @@ After the setup your OAuth tokens will be stored in a file at `~/.cloudifyrc`.
 
 Usage is pretty simple too:
 
-    cloudify <path_to_file>
+    cloudify [options] <path_to_file>
+
+    options:
+        -d    get the final link to the file instead of the CloudPT preview link
 
 After running this command, you'll get the public link to the file that you can share throught IM or IRC or whatever! If you're on OSX, you will also get the public link automatically copied into your clipboard. How cool is that?
 
