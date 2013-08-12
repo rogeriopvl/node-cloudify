@@ -6,7 +6,7 @@
     "maintainers":[
         {"name": "Rogério Vicente", "web": "http://rogeriopvl.com"}
     ],
-    "version": "1.0.3",
+    "version": "1.1.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/rogeriopvl/node-cloudify"
