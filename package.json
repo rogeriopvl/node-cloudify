@@ -32,6 +32,9 @@
   "bin": {
     "cloudify": "./bin/cloudify"
   },
+  "man": [
+    "./doc/cloudify.1"
+  ],
   "licenses": [
     {
       "type": "MIT",

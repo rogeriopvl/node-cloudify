@@ -1,0 +1,34 @@
+.TH "CLOUDIFY" "" "September 2013" "" ""
+.SH "NAME"
+\fBCloudify\fR \- Share your files from the command line
+.SH About
+.P
+Cloudify is a command line tool that enables you to quickly share files from the command\-line using your CloudPT \fIhttp://cloudpt\.pt\fR account\.
+.SH Install
+.P
+To install cloudify is as simple as:
+.P
+.RS 2
+.EX
+npm install \-g cloudify
+.EE
+.RE
+.P
+When you first run \fBcloudify\fR, the CloudPT OAuth setup will take place\. Just follow the instructions to enable access to your account\.
+.P
+After the setup your OAuth tokens will be stored in a file at \fB~/\.cloudifyrc\fR\|\.
+.SH Usage
+.P
+Usage is pretty simple too:
+.P
+.RS 2
+.EX
+cloudify [options] <path_to_file>
+
+options:
+    \-d    get the final link to the file instead of the CloudPT preview link
+.EE
+.RE
+.P
+After running this command, you\'ll get the public link to the file that you can share throught IM or IRC or whatever! If you\'re on OSX, you will also get the public link automatically copied into your clipboard\. How cool is that?
+
