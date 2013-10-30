@@ -55,9 +55,9 @@ function showHelp() {
     console.log('');
     console.log('Options:');
     console.log('\t-d  (optional) get direct link to file, instead of preview link');
-};
+}
 
 function showVersion() {
     var meta = require('../package.json');
     console.log('cloudify version v' + meta.version);
-};
+}
