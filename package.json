@@ -35,6 +35,9 @@
   "man": [
     "./doc/cloudify.1"
   ],
+  "scripts": {
+      "test": "mocha"
+  },
   "licenses": [
     {
       "type": "MIT",
