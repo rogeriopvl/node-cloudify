@@ -2,7 +2,11 @@
 
 var config = require('../lib/config.js')();
 
-if (!config.data.oauth.token) {
+// hack flag to allow run tests without a config file
+var isTest = process.argv[process.argv.length - 1] === '--test';
+if (isTest) { process.argv.pop(); }
+
+if (!config.data.oauth.token && !isTest) {
     require('../lib/setup.js')();
 }
 else {
