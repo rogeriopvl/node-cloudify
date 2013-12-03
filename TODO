@@ -1,0 +1,2 @@
+- Detect when oauth token was revoked
+- Add support for passing config file location as a cli param
