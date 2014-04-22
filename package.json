@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "oauth": ">= 0.9.10",
-    "meocloud": "~0.0.2"
+    "meocloud": "~0.0.2",
+    "minimist": "0.0.8"
   },
   "engines": {
     "node": ">=0.8.0"
