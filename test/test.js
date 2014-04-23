@@ -38,4 +38,13 @@ describe('Cloudify bin', function() {
             done();
         });
     });
+
+    it('should output help and exit with error when no files are passed', function(done) {
+        exec('./bin/cloudify --test', function(error, stdout, stderr) {
+            expect(error).to.be.ok;
+            expect(stdout).to.match(/^Usage\: cloudify \[options\] \<file\_to\_share\>/);
+            expect(stderr).to.be.empty;
+            done();
+        });
+    });
 });
