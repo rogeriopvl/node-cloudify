@@ -22,6 +22,7 @@ Usage is pretty simple too:
 
     options:
         -d    get the final link to the file instead of the CloudPT preview link
+        -n | --name (optional) save the file with a custom filename
 
 After running this command, you'll get the public link to the file that you can share throught IM or IRC or whatever! If you're on OSX, you will also get the public link automatically copied into your clipboard. How cool is that?
 
