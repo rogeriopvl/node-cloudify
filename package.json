@@ -1,11 +1,12 @@
 {
   "name": "cloudify",
-  "description": "Share files from the command line using CloudPT",
+  "description": "Share files from the command line using MEOCloud / CloudPT",
   "author": "Rogério Vicente <rogeriopvl@gmail.com>",
   "keywords": [
     "cloudify",
     "cloud",
     "cloudpt",
+    "meocloud",
     "cli"
   ],
   "maintainers": [
@@ -14,7 +15,7 @@
       "web": "http://rogeriopvl.com"
     }
   ],
-  "version": "1.2.0",
+  "version": "1.3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/rogeriopvl/node-cloudify"
