@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
 var argv = require('minimist')(process.argv.slice(2), {
-    boolean: ['download', 'overwrite', 'help', 'version', 'test'],
-    alias: { d: 'download', o: 'overwrite', v: 'version', h: 'help' }
+    string: ['name', 'n'],
+    boolean: ['download', 'help', 'version', 'test'],
+    alias: { d: 'download', n: 'name', v: 'version', h: 'help' }
 });
 
 var config = require('../lib/config.js')();
@@ -31,7 +32,7 @@ function startup(argv) {
         }
 
         var fs = require('fs');
-        var options = { download: argv.download };
+        var options = { download: argv.download, name: argv.name || false };
 
         if (fs.existsSync(files[0]) && !fs.lstatSync(files[0]).isDirectory()) {
             var cloudify = require('../lib/cloudify.js')(config.data, files[0], options);
@@ -48,7 +49,7 @@ function showHelp() {
     console.log('');
     console.log('Options:');
     console.log('\t-d | --download  (optional) get direct link to file, instead of preview link');
-    // console.log('\t-o | --overwrite (optional) overwrite file in MEOCloud if exists');
+    console.log('\t-n | --name (optional) save the file with a custom filename');
 }
 
 function showVersion() {
