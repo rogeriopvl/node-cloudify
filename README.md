@@ -1,5 +1,7 @@
 # Cloudify - Share your files from the command line
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/rogeriopvl/node-cloudify.svg)](https://greenkeeper.io/)
+
 ## About
 
 Cloudify is a command line tool that enables you to quickly share files from the command-line using your [CloudPT][0] account.
