@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "oauth": "~0.9.10",
-    "meocloud": "^1.0.0",
+    "meocloud": "^2.0.0",
     "minimist": "^1.1.0"
   },
   "engines": {
