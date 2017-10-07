@@ -1,6 +1,6 @@
 {
   "name": "cloudify",
-  "description": "Share files from the command line using MEOCloud / CloudPT",
+  "description": "Share files from the command line using MEOCloud",
   "author": "Rogério Vicente <rogeriopvl@gmail.com>",
   "keywords": [
     "cloudify",
@@ -21,7 +21,7 @@
     "url": "https://github.com/rogeriopvl/node-cloudify"
   },
   "dependencies": {
-    "oauth": "~0.9.10",
+    "oauth": "^0.9.10",
     "meocloud": "^2.0.0",
     "minimist": "^1.1.0"
   },
@@ -38,7 +38,8 @@
     "./doc/cloudify.1"
   ],
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "manpages": "marked-man README.md > doc/cloudify.1"
   },
   "licenses": [
     {
@@ -47,9 +48,6 @@
     }
   ],
   "devDependencies": {
-    "grunt-contrib-jshint": "~1.1.0",
-    "grunt": "~1.0.1",
-    "grunt-shell": "^2.1.0",
     "chai": "^3.5.0",
     "mocha": "^4.0.0"
   }
