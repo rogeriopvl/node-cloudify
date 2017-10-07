@@ -1,6 +1,6 @@
 # Cloudify - Share your files from the command line
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/rogeriopvl/node-cloudify.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/rogeriopvl/node-cloudify.svg?branch=master)](https://travis-ci.org/rogeriopvl/node-cloudify) [![Greenkeeper badge](https://badges.greenkeeper.io/rogeriopvl/node-cloudify.svg)](https://greenkeeper.io/)
 
 ## About
 
